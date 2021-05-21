@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var o = {}
+        o[Symbol.iterator] = function() {
+            var v = 2
+            return {
+                next: function() {
+                    return { value: v++, done: v>10 }
+                }
+            }
+        }
+        
+        for(var v of o)
+        console.log(v)
+    </script>
+</body>
+</html>
