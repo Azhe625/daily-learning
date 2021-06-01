@@ -1,6 +1,6 @@
 //两数之和  nums = [2,1,4,6] target = 6
 
-//时间复杂度 O(n)
+//时间复杂度 O(n) 哈希查找
 function twoSum(nums,target) {
     let map = {} //key是值 val是下标
     for(let i =0;i<nums.length;i++) {
